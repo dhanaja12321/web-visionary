@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhanajaya Weerarathne | Elite Multi-Disciplinary Consultancy Ecosystem</title>
+    <!-- Premium Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Pro Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -163,7 +165,7 @@
 
         .hero-central-panel p {
             font-size: 1.35rem;
-            color: var(--clr-text-dim);
+            color: var(--clr-text-muted);
             margin-bottom: 3.5rem;
             max-width: 850px;
             margin-left: auto;
@@ -189,6 +191,7 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             font-size: 0.95rem;
             letter-spacing: 0.5px;
+            cursor: pointer;
         }
 
         .btn-gold {
@@ -214,16 +217,38 @@
             transform: translateY(-3px);
         }
 
+        /* Inline Pillar Action Buttons */
+        .btn-pillar-link {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glow);
+            color: var(--clr-text-main);
+        }
+        .btn-pillar-link:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
         /* Structural Container Blocks */
         section {
             padding: 8rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
+            position: relative;
         }
 
         .section-header-centered {
             text-align: center;
-            margin-bottom: 6rem;
+            margin-bottom: 5rem;
         }
 
         .section-header-centered h2 {
@@ -266,8 +291,6 @@
             backdrop-filter: blur(10px);
         }
 
-        .matrix-trigger-btn i { font-size: 1.5rem; }
-
         .matrix-trigger-btn:hover {
             border-color: rgba(255,255,255,0.15);
             color: var(--clr-text-main);
@@ -304,12 +327,6 @@
             font-weight: 800;
             margin-bottom: 1rem;
             letter-spacing: -0.5px;
-        }
-
-        .pane-info-side .pane-subtitle {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
         }
 
         .feature-item-box {
@@ -395,33 +412,76 @@
         .schedule-day-lbl { font-weight: 700; }
         .schedule-time-lbl { color: var(--clr-text-muted); text-align: right; }
 
-        /* Social Trust Ecosystem Banner */
-        .trust-matrix-container {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%);
-            border: 1px solid rgba(16, 185, 129, 0.25);
-            border-radius: 36px;
-            padding: 5rem 4rem;
-            text-align: center;
-            position: relative;
+        /* Integrated High-End Social Media Matrix Hub */
+        .social-matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
         }
 
-        .trust-metrics-flex {
+        .matrix-hub-card {
+            background: var(--bg-card-glass);
+            border: 1px solid var(--border-glow);
+            padding: 2.2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
             display: flex;
-            justify-content: center;
-            gap: 6rem;
-            margin: 3.5rem 0;
-            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
         }
-
-        .metric-item-node h3 {
-            font-size: 4rem;
+        .matrix-hub-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        .matrix-card-top h4 {
+            font-size: 1.3rem;
             font-weight: 800;
-            background: linear-gradient(to right, var(--clr-psychology), var(--clr-tech));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
+        .matrix-card-top p {
+            color: var(--clr-text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Specialized Color Aesthetics for the Matrix Cards */
+        .m-astrology h4 { color: var(--clr-astrology); }
+        .m-visionary h4 { color: var(--clr-psychology); }
+        .m-tech h4 { color: var(--clr-tech); }
+        .m-education h4 { color: var(--clr-vaastu); }
 
-        /* Inbound Communications & Payment Matrix Form */
+        .btn-matrix-action {
+            width: 100%;
+            padding: 0.9rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .m-astrology .btn-matrix-action { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2); }
+        .m-visionary .btn-matrix-action { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #000; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); }
+        .m-tech .btn-matrix-action { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: #000; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.2); }
+        .m-education .btn-matrix-action { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #000; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2); }
+
+        .m-astrology .btn-matrix-action:hover { box-shadow: 0 6px 22px rgba(139, 92, 246, 0.4); transform: translateY(-2px); }
+        .m-visionary .btn-matrix-action:hover { box-shadow: 0 6px 22px rgba(16, 185, 129, 0.4); transform: translateY(-2px); }
+        .m-tech .btn-matrix-action:hover { box-shadow: 0 6px 22px rgba(6, 182, 212, 0.4); transform: translateY(-2px); }
+        .m-education .btn-matrix-action:hover { box-shadow: 0 6px 22px rgba(245, 158, 11, 0.4); transform: translateY(-2px); }
+
+        /* Secure Communications Hub & Control */
         .gateway-layout-system {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -506,7 +566,6 @@
             font-size: 0.9rem;
         }
 
-        /* Advanced UI Keyframe Animations */
         @keyframes initialFade {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -517,9 +576,9 @@
             to { opacity: 1; transform: scale(1) translateY(0); }
         }
 
-        /* Responsive Adaptive Screen Breakpoints */
         @media (max-width: 1100px) {
             .tab-matrix-control { grid-template-columns: repeat(2, 1fr); }
+            .social-matrix-grid { grid-template-columns: 1fr; }
             .pane-layout-grid, .financial-grid-system, .gateway-layout-system { grid-template-columns: 1fr; gap: 3rem; }
             .hero-central-panel h1 { font-size: 2.8rem; }
             nav ul { display: none; }
@@ -543,7 +602,7 @@
                     <li><a href="#home" class="active-link">Home</a></li>
                     <li><a href="#pillars-matrix">Core Pillars</a></li>
                     <li><a href="#financial-nodes">Schedules</a></li>
-                    <li><a href="#trust-hub">Community</a></li>
+                    <li><a href="#trust-hub">Digital Hub</a></li>
                     <li><a href="#booking-gateway">Contact</a></li>
                 </ul>
             </nav>
@@ -557,7 +616,7 @@
             <p>Empirical Human Psychological Counseling, Precision Astronomical Calculations, Structural Vaastu Engineering, and Advanced Computing System Frameworks united under one high-integrity operational node.</p>
             <div class="action-flex-group">
                 <a href="#booking-gateway" class="btn-action-node btn-gold"><i class="fa-solid fa-bolt"></i> Consult & Secure Appointment</a>
-                <a href="#pillars-matrix" class="btn-action-node btn-glass">Explore 4 Deep Pillars</a>
+                <a href="#trust-hub" class="btn-action-node btn-glass"><i class="fa-brands fa-facebook"></i> Browse Knowledge Grid</a>
             </div>
         </div>
     </section>
@@ -587,11 +646,11 @@
             </div>
         </div>
 
+        <!-- Pane 1: Psychology Content -->
         <div id="pane-psychology" class="pillar-pane-block active-pane">
             <div class="pane-layout-grid">
                 <div class="pane-info-side">
                     <h3 style="color: var(--clr-psychology)">Visionary Life Guidance & Wisdom</h3>
-                    <p class="pane-subtitle" style="color: rgba(16, 185, 129, 0.4)">Clinical Psychology Science | Neuroplasticity Synergy | Emotional Resolution</p>
                     <p>Grounded in active academic research (Reading for MSc & PhD) and rigorous government hospital psychiatric clinical observations under elite consultant specialists. We bypass superficial motivation, executing structured, evidence-based cognitive interventions to restore clarity and permanent inner peace.</p>
                     
                     <div class="feature-item-box">
@@ -604,6 +663,9 @@
                             <p>Validated clinical protocols targeting addiction recovery, comprehensive rehab architecture, and adolescent mental tracking.</p>
                         </div>
                     </div>
+                    <a href="https://web.facebook.com/profile.php?id=61589214153630" target="_blank" class="btn-pillar-link">
+                        <i class="fa-brands fa-facebook" style="color: var(--clr-psychology)"></i> Visit Official Psychology Page
+                    </a>
                 </div>
                 <div class="pane-visual-side">
                     <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80" alt="Psychology Science">
@@ -611,11 +673,11 @@
             </div>
         </div>
 
+        <!-- Pane 2: Astrology Content -->
         <div id="pane-astrology" class="pillar-pane-block">
             <div class="pane-layout-grid">
                 <div class="pane-info-side">
                     <h3 style="color: var(--clr-astrology)">Astrology Life Partner Academic</h3>
-                    <p class="pane-subtitle" style="color: rgba(139, 92, 246, 0.4)">Strict Astronomy | Planetary Vectors | Parashara Hora Shastra</p>
                     <p>Absolute rejection of superstition and commercial myths. Our methodology maps raw planetary coordinates and mathematical divisional charts to utilize scientific astrology as a profound psychological buffer to neutralize anxiety and forecast strategic timeline opportunities.</p>
                     
                     <div class="feature-item-box">
@@ -628,6 +690,9 @@
                             <p>Real-time mathematical calculation models for answering highly critical situational questions and strategic decision windows.</p>
                         </div>
                     </div>
+                    <a href="https://web.facebook.com/groups/1395380927144589" target="_blank" class="btn-pillar-link">
+                        <i class="fa-brands fa-facebook" style="color: var(--clr-astrology)"></i> Enter Astrology Community
+                    </a>
                 </div>
                 <div class="pane-visual-side">
                     <img src="Gemini_Generated_Image_noca1lnoca1lnoca.png" alt="Astrology Life Partner" onerror="this.src='https://images.unsplash.com/photo-1532968961962-8a0cb3a2d4f5?w=800'">
@@ -635,11 +700,11 @@
             </div>
         </div>
 
+        <!-- Pane 3: Vaastu Content -->
         <div id="pane-vaastu" class="pillar-pane-block">
             <div class="pane-layout-grid">
                 <div class="pane-info-side">
                     <h3 style="color: var(--clr-vaastu)">Vaastu Shastra & Construction</h3>
-                    <p class="pane-subtitle" style="color: rgba(245, 158, 11, 0.4)">Architectural House Plans | Structural Engineering Alignment | Cosmic Energies</p>
                     <p>Integrating deep architectural home design blueprinting with advanced Vaastu principles to maximize cosmic energetic flow within residential and commercial properties. We bridge the structural accuracy of modern engineering with verified ancient spatial alignment laws.</p>
                     
                     <div class="feature-item-box">
@@ -659,11 +724,11 @@
             </div>
         </div>
 
+        <!-- Pane 4: Tech Content -->
         <div id="pane-tech" class="pillar-pane-block">
             <div class="pane-layout-grid">
                 <div class="pane-info-side">
                     <h3 style="color: var(--clr-tech)">Dhanajaya Technologies</h3>
-                    <p class="pane-subtitle" style="color: rgba(6, 182, 212, 0.4)">Hardware Engineering | Industrial Networks | System Integration</p>
                     <p>High-tier system solutions providing component-level electronic circuit diagnostic repairs, complex commercial network wiring routing layout deployment, and surveillance CCTV monitoring setups.</p>
                     
                     <div class="feature-item-box">
@@ -672,9 +737,17 @@
                             <p>Precision layouts, deployment and maintenance tracking for heavy Single Phase and Single-to-Three Phase automated electrical power line grids.</p>
                         </div>
                         <div class="sub-feature-card">
-                            <h4>Computer Architecture & Classes</h4>
+                            <h4>Computer Architecture & Academy</h4>
                             <p>Professional ICT training modules combined with customized software system designs to scale your operational business logic flow.</p>
                         </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://web.facebook.com/profile.php?id=100077765105906&sk=followers" target="_blank" class="btn-pillar-link">
+                            <i class="fa-brands fa-facebook" style="color: var(--clr-tech)"></i> Dhanajaya Technologies Page
+                        </a>
+                        <a href="https://web.facebook.com/profile.php?id=61578928525463" target="_blank" class="btn-pillar-link">
+                            <i class="fa-brands fa-facebook" style="color: var(--clr-vaastu)"></i> Education Partner Page
+                        </a>
                     </div>
                 </div>
                 <div class="pane-visual-side">
@@ -684,6 +757,7 @@
         </div>
     </section>
 
+    <!-- Operational Schedules & Pricing Structures -->
     <section id="financial-nodes" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--border-glow); border-bottom: 1px solid var(--border-glow);">
         <div class="financial-grid-system">
             <div class="office-schedule-panel">
@@ -722,7 +796,7 @@
                 <div class="pricing-row-node">
                     <div class="price-label-block">
                         <h4>Single Issue Structural Consultation</h4>
-                        <p>Targeted strategic session resolving an immediate business or behavioral milestone</p>
+                        <p>Targeted strategic session resolving an immediate business milestone</p>
                     </div>
                     <div class="price-numeric-tag">LKR 1,000</div>
                 </div>
@@ -737,33 +811,65 @@
         </div>
     </section>
 
+    <!-- Upgraded Social Matrix Infrastructure Hub -->
     <section id="trust-hub">
         <div class="trust-matrix-container">
-            <span class="premium-mini-tag" style="background:rgba(139, 92, 246, 0.1); border-color:rgba(139, 92, 246, 0.3); color:var(--clr-astrology)">Ecosystem Scale</span>
-            <h2 style="font-family:'Cinzel', serif; font-size:2.5rem; font-weight:700; margin-top:0.5rem;">The Astrology Life Partner Collective</h2>
-            <p style="color: var(--clr-text-muted); max-width: 800px; margin: 1.5rem auto 0; font-size:1.1rem;">Authoring over 3,000 deep scientific, psychological, and cosmic entries within our open digital networks to systematically restructure minds, stabilize behavior tracks, and restore lasting life clarity.</p>
+            <span class="premium-mini-tag" style="background:rgba(139, 92, 246, 0.1); border-color:rgba(139, 92, 246, 0.3); color:var(--clr-astrology)">Ecosystem Knowledge Grid</span>
+            <h2 style="font-family:'Cinzel', serif; font-size:2.6rem; font-weight:700; margin-top:0.5rem;">Strategic Digital Footprint Hub</h2>
+            <p style="color: var(--clr-text-muted); max-width: 800px; margin: 1.5rem auto; font-size:1.1rem; line-height:1.7;">
+                ඔබට අවශ්‍ය ඕනෑම අංශයකින් දිනපතා පළවන පර්යේෂණාත්මක ලිපි, දැනුවත් කිරීම් සහ වෘත්තීය සේවාවන් සමඟ සෘජුවම සම්බන්ධ වීමට අදාළ නිල මුණුපොත (Facebook) පිටු සහ සමූහයන් පහතින් තෝරාගන්න.
+            </p>
             
-            <div class="trust-metrics-flex">
-                <div class="metric-item-node">
-                    <h3>15,000+</h3>
-                    <p style="font-weight:700; color:var(--clr-text-main); margin-top:0.25rem;">Active Group Members</p>
+            <!-- Highly Organized Professional Matrix Cards Grid -->
+            <div class="social-matrix-grid">
+                <!-- Card 1: Astrology Group -->
+                <div class="matrix-hub-card m-astrology">
+                    <div class="matrix-card-top">
+                        <h4><i class="fa-solid fa-users"></i> Astrology Life Partner</h4>
+                        <p>සාමාජිකයින් 15,000කට අධික සක්‍රීය ප්‍රජාව. දිනපතා මනස සන්සුන් කරන සහ ජීවිතය නිවැරදිව සැලසුම් කරන වටිනා ජ්‍යොතිෂ ලිපි 3,000කට වඩා අඩංගු ප්‍රධාන මධ්‍යස්ථානය.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/1395380927144589" target="_blank" class="btn-matrix-action">
+                        <i class="fa-brands fa-facebook"></i> ENTER COMMUNITY GROUP
+                    </a>
                 </div>
-                <div class="metric-item-node">
-                    <h3>3,000+</h3>
-                    <p style="font-weight:700; color:var(--clr-text-main); margin-top:0.25rem;">Research-Backed Articles Published</p>
+
+                <!-- Card 2: Visionary Life Guidance -->
+                <div class="matrix-hub-card m-visionary">
+                    <div class="matrix-card-top">
+                        <h4><i class="fa-solid fa-brain"></i> Visionary Life Guidance & Wisdom</h4>
+                        <p>මනෝවිද්‍යාත්මක උපදේශනය සහ ක්වන්ටම් සිද්ධාන්ත ඔස්සේ පුද්ගල අභ්‍යන්තර සාමය (Inner Peace) සහ මානසික ගැටලු නිරාකරණය සඳහා වෙන්වූ නිල පිටුව.</p>
+                    </div>
+                    <a href="https://web.facebook.com/profile.php?id=61589214153630" target="_blank" class="btn-matrix-action">
+                        <i class="fa-brands fa-facebook"></i> VISIT OFFICIAL PAGE
+                    </a>
                 </div>
-                <div class="metric-item-node">
-                    <h3>100%</h3>
-                    <p style="font-weight:700; color:var(--clr-text-main); margin-top:0.25rem;">Clinical Data Confidentiality</p>
+
+                <!-- Card 3: Dhanajaya Technologies -->
+                <div class="matrix-hub-card m-tech">
+                    <div class="matrix-card-top">
+                        <h4><i class="fa-solid fa-microchip"></i> Dhanajaya Technologies</h4>
+                        <p>ඉලෙක්ට්‍රොනික්ස්, පරිගණක දෘඩාංග, CCTV, ජාලකරණ (Network Architectures) සහ කාර්මික විදුලි පද්ධති සැලසුම්කරණය පිළිබඳ වෘත්තීය සේවා සපයන නිල ආයතනික පිටුව.</p>
+                    </div>
+                    <a href="https://web.facebook.com/profile.php?id=100077765105906&sk=followers" target="_blank" class="btn-matrix-action">
+                        <i class="fa-brands fa-facebook"></i> VISIT ENTERPRISE DESK
+                    </a>
+                </div>
+
+                <!-- Card 4: We are your Education Partner -->
+                <div class="matrix-hub-card m-education">
+                    <div class="matrix-card-top">
+                        <h4><i class="fa-solid fa-graduation-cap"></i> We Are Your Education Partner</h4>
+                        <p>තොරතුරු තාක්ෂණය (ICT), මනෝවිද්‍යාව සහ විද්‍යාත්මක ජ්‍යොතිෂ ඩිප්ලෝමා පාඨමාලා මෙහෙයවන අධ්‍යාපනික සහ දේශන මධ්‍යස්ථාන කටයුතු සඳහා වෙන්වූ නිල පිටුව.</p>
+                    </div>
+                    <a href="https://web.facebook.com/profile.php?id=61578928525463" target="_blank" class="btn-matrix-action">
+                        <i class="fa-brands fa-facebook"></i> ACCESS ACADEMIC PORTAL
+                    </a>
                 </div>
             </div>
-
-            <a href="https://web.facebook.com/groups/1395380927144589" target="_blank" class="btn-action-node btn-gold" style="border-radius:14px;">
-                <i class="fa-brands fa-facebook"></i> Explore Our Official Group Infrastructure
-            </a>
         </div>
     </section>
 
+    <!-- Secure Booking Gateway Form Infrastructure -->
     <section id="booking-gateway">
         <div class="section-header-centered">
             <h2>Secure Intake Gateway</h2>
@@ -772,13 +878,13 @@
 
         <div class="gateway-layout-system">
             <div>
-                <h3 style="font-size:1.5rem; margin-bottom:1.5rem; font-weight:800;">Authenticated Touchpoints</h3>
+                <h3>Authenticated Touchpoints</h3>
                 
                 <a href="https://wa.me/94776512392" class="channel-card-anchor" target="_blank">
                     <div class="channel-icon-frame"><i class="fa-brands fa-whatsapp"></i></div>
                     <div>
                         <small style="color: var(--clr-text-muted); font-weight:700; text-transform:uppercase;">Primary Hotline & WhatsApp Node</small>
-                        <div style="font-size:1.25rem; font-weight:800; margin-top:2px; color:#fff;">077 651 2392</div>
+                        <div style="font-size:1.25rem; font-weight:800; color:#fff; margin-top:2px;">077 651 2392</div>
                     </div>
                 </a>
 
@@ -786,7 +892,7 @@
                     <div class="channel-icon-frame"><i class="fa-solid fa-phone"></i></div>
                     <div>
                         <small style="color: var(--clr-text-muted); font-weight:700; text-transform:uppercase;">Secondary Consultation Desk</small>
-                        <div style="font-size:1.25rem; font-weight:800; margin-top:2px; color:#fff;">072 651 2392</div>
+                        <div style="font-size:1.25rem; font-weight:800; color:#fff; margin-top:2px;">072 651 2392</div>
                     </div>
                 </div>
 
@@ -794,7 +900,7 @@
                     <div class="channel-icon-frame"><i class="fa-solid fa-tower-cell"></i></div>
                     <div>
                         <small style="color: var(--clr-text-muted); font-weight:700; text-transform:uppercase;">Technical Backup Grid Network</small>
-                        <div style="font-size:1.25rem; font-weight:800; margin-top:2px; color:#fff;">071 918 0927</div>
+                        <div style="font-size:1.25rem; font-weight:800; color:#fff; margin-top:2px;">071 918 0927</div>
                     </div>
                 </div>
 
@@ -802,7 +908,6 @@
                     <h4><i class="fa-solid fa-shield-halved"></i> Verified Banking Node Registry</h4>
                     <p style="font-weight:700; margin-top:0.5rem; color:#fff;">Institution: PEOPLE'S BANK</p>
                     <p style="font-weight:700; margin-top:0.25rem; color:#fff;">Account Mapping: 017-200-1-2633864-5</p>
-                    <p style="font-size:0.8rem; margin-top:0.75rem; line-height:1.4;">* Post transmission of clearance fees, kindly route a clear digital screenshot confirmation via WhatsApp to immediately bind your slot timeline.</p>
                 </div>
             </div>
 
@@ -836,30 +941,19 @@
 
     <footer>
         <p>&copy; <span id="epochYear"></span> Dhanajaya Weerarathne. All System Rights Reserved.</p>
-        <p style="font-size:0.75rem; margin-top:0.6rem; color:rgba(255,255,255,0.15);">Engineered using High-Performance Native CSS Grid & Vanilla JS Layering. Secured for Instant Vercel Edge Framework Streamlining.</p>
     </footer>
 
     <script>
-        // Update Footer Epoch Timestamp automatically
         document.getElementById('epochYear').textContent = new Date().getFullYear();
 
-        // 4-Pillar Content Routing Engine
         function routePillarPane(clickedBtn, targetPillarId) {
-            // Remove active node traits from triggers
-            document.querySelectorAll('.matrix-trigger-btn').forEach(btn => {
-                btn.classList.remove('active-node');
-            });
-            // Hide all structural blocks
-            document.querySelectorAll('.pillar-pane-block').forEach(pane => {
-                pane.classList.remove('active-pane');
-            });
+            document.querySelectorAll('.matrix-trigger-btn').forEach(btn => btn.classList.remove('active-node'));
+            document.querySelectorAll('.pillar-pane-block').forEach(pane => pane.classList.remove('active-pane'));
 
-            // Bind active presentation traits to target structural units
             clickedBtn.classList.add('active-node');
             document.getElementById('pane-' + targetPillarId).classList.add('active-pane');
         }
 
-        // Automated WhatsApp Direct Payload Secure Router
         function executeGatewayRouting(e) {
             e.preventDefault();
             const name = document.getElementById('nodeName').value;
@@ -869,7 +963,6 @@
 
             const finalPayloadMessage = `Hello Dhanajaya Weerarathne, I would like to lock an appointment for an official consultancy session.%0A%0A- Full Name: ${encodeURIComponent(name)}%0A- Contact Node: ${encodeURIComponent(phone)}%0A- Core Pillar Domain: ${encodeURIComponent(pillar)}%0A- Case Context: ${encodeURIComponent(text)}`;
             
-            // Redirect window streaming directly to the secure verified mobile gateway hotline
             window.open(`https://wa.me/94776512392?text=${finalPayloadMessage}`, '_blank');
         }
     </script>
